@@ -80,8 +80,8 @@ Schematter is not yet listed in the Obsidian community plugins directory. Instal
   active note without calling the model.
 - **Rename file from title** renames the active note from its configured title value without
   calling the model, even if automatic renaming is off.
-- **Write title heading** inserts or updates the active note's first Markdown heading from
-  its configured title value without calling the model, even if automatic heading writes are off.
+- **Write title heading** inserts the configured title heading at the top of the active
+  note body without calling the model, even if automatic heading writes are off.
 - **Enforce Frontmatter for All Notes in Active Folder** processes every Markdown
   note in the active note's folder and its subfolders, except excluded paths/folders.
 - **Enforce Frontmatter for All Notes in Vault** processes every Markdown note in the vault,
@@ -111,11 +111,11 @@ success/failure, latency, and the accepted response format mode.
 | **Preserve all unknown frontmatter keys** | When on, keys that are not enabled frontmatter properties are left untouched. When off, unknown keys are removed unless listed in **Preserve specific unknown keys** (a removal preview is always shown in this mode). |
 | **Preserve specific unknown keys** | Comma- or newline-separated unknown frontmatter keys to keep during cleanup mode, such as `aliases` or `cssclasses`. Leave empty to remove all unknown keys. |
 | **Exclude paths from batch enforcement** | Comma- or newline-separated vault path/glob patterns skipped by folder/vault batch commands, such as `**/*.excalidraw.md`. |
-| **Exclude folders from batch enforcement** | Comma- or newline-separated vault folders skipped by folder/vault batch commands. Defaults skip `Excalidraw/` and `Canvas/`. |
+| **Exclude folders from batch enforcement** | Comma- or newline-separated vault folders skipped by folder/vault batch commands. Defaults skip `excalidraw/`, `system/`, and `attachments/`. |
 | **Title source YAML key** | Frontmatter YAML key used for title actions. Defaults to `title`. |
 | **Rename file from title** | Rename the note file after frontmatter is written, using the generated title value. |
 | **Filename case** | Optional title cleanup for renamed files: `None`, `Title Case`, `Sentence case`, `lowercase`, `kebab-case`, `snake_case`, or `PascalCase`. Invalid filename characters are sanitized after this step. |
-| **Write title heading** | Insert or update the first Markdown heading from the generated title value. |
+| **Write title heading** | Insert the generated title heading at the top of the Markdown body. |
 | **Title heading level** | Markdown heading level, `H1` through `H6`, used by Write title heading. |
 | **Title Case preserve words** | Words whose configured casing is preserved when Filename case or Title heading case is `Title Case`, such as `iOS` or `JavaScript`. |
 | **Title Case lowercase words** | Words kept lowercase when Filename case or Title heading case is `Title Case`, such as `a`, `an`, `and`, or `or`. |
@@ -368,8 +368,8 @@ from the merged frontmatter.
 - **Rename file from title** formats the title with **Filename case**, sanitizes invalid
   filename characters, and renames the Markdown file. If another note already has that path,
   the plugin appends ` 2`, ` 3`, and so on.
-- **Write title heading** updates the first Markdown heading after frontmatter. If the note
-  does not have a Markdown heading, the plugin inserts one after the frontmatter block.
+- **Write title heading** inserts the configured heading at the top of the Markdown body,
+  immediately after the frontmatter block when one exists.
 - Single-note previews show planned file rename and heading changes before writing. Batch
   commands skip per-note previews and apply the same deterministic rules.
 - Command palette actions can run titles without contacting the provider:
