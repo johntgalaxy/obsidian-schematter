@@ -1,0 +1,11 @@
+{
+  "id": "obsidian-schematter",
+  "name": "Schematter",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Enforce and populate note frontmatter with schemas and local LLMs.",
+  "author": "johnt",
+  "authorUrl": "",
+  "fundingUrl": "",
+  "isDesktopOnly": false
+}
