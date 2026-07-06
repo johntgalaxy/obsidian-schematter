@@ -13,6 +13,18 @@ Nothing leaves your machine: the plugin only talks to the local endpoint you con
 
 ---
 
+## Why
+
+Frontmatter is useful — until maintaining it becomes the work.
+
+The honest version: I kept finding myself carefully typing YAML instead of actually thinking. Tagging, categorizing, filling in metadata fields — it feels productive, but it isn't. The note is already written. The idea is already there. Reaching for the frontmatter block at that point is a way of avoiding the harder things: synthesizing what you've learned, connecting it to something else, committing an opinion to the page.
+
+Schematter exists to make frontmatter zero-cost. You define what your notes should look like once, point the plugin at a local model, and let it handle the rest. The model reads your note and fills in the schema. You review it in seconds and move on.
+
+No API keys. No data leaving your machine. No subscription. Just your notes, your schema, and a model running locally.
+
+---
+
 ## What it does
 
 1. You run the **Enforce Frontmatter** command on an open Markdown note.
