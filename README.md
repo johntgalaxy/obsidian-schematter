@@ -7,6 +7,8 @@ the schema, and writes the result back into the note's frontmatter.
 
 Nothing leaves your machine: the plugin only talks to the local endpoint you configure.
 
+> **Personal project:** This repository is shared publicly but is not actively maintained for external contributors. Pull requests and issues may not receive a response. See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
 ---
 
 ## What it does
@@ -19,6 +21,18 @@ Nothing leaves your machine: the plugin only talks to the local endpoint you con
 5. The plugin extracts and validates that JSON against your schema, normalizes a few
    common quirks (e.g. dates), and merges it into the note's frontmatter.
 6. Optionally, a **preview dialog** shows the proposed changes before anything is written.
+
+---
+
+## Installation
+
+Schematter is not yet listed in the Obsidian community plugins directory. Install it manually:
+
+1. Go to the [latest release](https://github.com/johntgalaxy/obsidian-schematter/releases/latest).
+2. Download **`obsidian-schematter.zip`** from the release assets.
+3. Unzip it — this produces a folder named `obsidian-schematter/`.
+4. Move that folder into your vault's `.obsidian/plugins/` directory.
+5. In Obsidian, go to **Settings → Community Plugins**, enable community plugins if prompted, then enable **Schematter**.
 
 ---
 
