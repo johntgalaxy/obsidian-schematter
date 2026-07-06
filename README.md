@@ -9,6 +9,8 @@ Nothing leaves your machine: the plugin only talks to the local endpoint you con
 
 > **Personal project:** This repository is shared publicly but is not actively maintained for external contributors. Pull requests and issues may not receive a response. See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
+![Schematter demo](schematter-run-example.gif)
+
 ---
 
 ## What it does
